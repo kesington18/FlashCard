@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    font-family: "Roboto", sans-serif;
+    border: 2px solid black;
+    width: 100%;
+    /* height: 100vh; */
+    background-color: antiquewhite;
+}
+
+nav{
+    border: 1px solid rgba(31, 125, 31, 0.648);
+    display: flex;
+    font-family: "Roboto", sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+nav button{
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    /* border: 2px solid whitesmoke; */
+}
+
+.card-criteria{
+    border: 1px solid red;
+    margin-top: 10px;
+}
+
+.create-box{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    border: 1px solid blue;
+    box-shadow: 0px 2px 6px 0 gray;
+}
+
+.create-box h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.create-box textarea{
+    font-family: "Roboto", sans-serif;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.create-box button{
+    padding: 10px;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 20%;
+}
+
+.create-box .error{
+    display: none;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: palevioletred;
+}
+
+#update{
+    display: none;
+}
+
+.flashcards{
+    width: 100%;
+    margin-top: 10px;
+    /* margin: auto; */
+    padding-inline: 10px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+
+.flashcard{
+    border: 2px solid brown;
+    height: 250px;
+    box-shadow: 0px 2px 6px 0 gray;
+    word-wrap: break-word;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flashcard h2{  
+    /* border: 2px solid green; */
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.answer{
+    display: none;
+}
+
+.actions{
+    width: 100%;
+    display: flex;
+    column-gap: 10px;
+    border: 2px solid aqua;
+    justify-content: center;
+}
+
+.actions button{
+    width: 20%;
+    padding: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .flashcards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .create-box{
+        width: 80%;
+    }
+}
+@media (max-width: 480px) {
+    nav{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .flashcards{
+        grid-template-columns: 1fr;
+    }
+
+    .card-criteria{
+        padding-inline: 10px;
+    }
+
+    .create-box{
+        width: 100%;
+    }
+}
