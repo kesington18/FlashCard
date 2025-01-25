@@ -51,7 +51,7 @@ function addFlashCard() {
         error.style.display = 'none';
         var object;
         if (localStorage.getItem('object') == null) {
-            object = []
+            object = [];
         } else {
             object = JSON.parse(localStorage.getItem('object'));
         }
